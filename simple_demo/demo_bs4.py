@@ -1,6 +1,9 @@
 
 from bs4 import BeautifulSoup
 
+## bs4 for extracting data from wiki:
+## https://www.pluralsight.com/resources/blog/guides/extracting-data-html-beautifulsoup
+
 soup = BeautifulSoup(open("beautifulsoup.html"), features = "lxml")
 print(soup)
 print(type(soup))
