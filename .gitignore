@@ -87,3 +87,4 @@ env/
 .DS_Store
 
 simple_demo/demo_scrapy_1
+simple_demo/demo_scrapy_2
