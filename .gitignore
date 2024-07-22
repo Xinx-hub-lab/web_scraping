@@ -86,3 +86,4 @@ env/
 # MacOS specific files
 .DS_Store
 
+simple_demo/demo_scrapy_1
