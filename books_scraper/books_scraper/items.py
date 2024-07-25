@@ -13,6 +13,6 @@ class BooksScraperItem(scrapy.Item):
     category = scrapy.Field()
     price_pound = scrapy.Field()
     rating = scrapy.Field()
-    avaibility = scrapy.Field()
+    availability = scrapy.Field()
     in_stock = scrapy.Field()
     description = scrapy.Field()

@@ -1,5 +1,10 @@
 learning_materials/
 chromedriver
+user_agent.csv
+simple_demo/demo_scrapy_1
+simple_demo/demo_scrapy_2
+
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -86,5 +91,3 @@ env/
 # MacOS specific files
 .DS_Store
 
-simple_demo/demo_scrapy_1
-simple_demo/demo_scrapy_2

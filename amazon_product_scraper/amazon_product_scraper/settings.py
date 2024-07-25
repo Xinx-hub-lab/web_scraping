@@ -1,8 +1,4 @@
-
-import pandas as pd
-from pathlib import Path
-
-# Scrapy settings for books_scraper project
+# Scrapy settings for amazon_product_scraper project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -11,25 +7,25 @@ from pathlib import Path
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'books_scraper'
+BOT_NAME = 'amazon_product_scraper'
 
-SPIDER_MODULES = ['books_scraper.spiders']
-NEWSPIDER_MODULE = 'books_scraper.spiders'
+SPIDER_MODULES = ['amazon_product_scraper.spiders']
+NEWSPIDER_MODULE = 'amazon_product_scraper.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'books_scraper (+http://www.yourdomain.com)'
+#USER_AGENT = 'amazon_product_scraper (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-CONCURRENT_REQUESTS = 32
+#CONCURRENT_REQUESTS = 32
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 0.5
+#DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
@@ -40,30 +36,22 @@ DOWNLOAD_DELAY = 0.5
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
 
-## import user_agent
-ua_csv_path = Path(__file__).resolve().parent.parent.parent / 'user_agent.csv'
-ua_df = pd.read_csv(ua_csv_path)
-user_agent = ua_df['user_agent'][0]
-
 # Override the default request headers:
-DEFAULT_REQUEST_HEADERS = {
-  'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-  'Accept-Language': 'en',
-  'User-Agent': user_agent
-}
-
-FEED_EXPORT_ENCODING = 'utf-8-sig'
+#DEFAULT_REQUEST_HEADERS = {
+#   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+#   'Accept-Language': 'en',
+#}
 
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'books_scraper.middlewares.BooksScraperSpiderMiddleware': 543,
+#    'amazon_product_scraper.middlewares.AmazonProductScraperSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'books_scraper.middlewares.BooksScraperDownloaderMiddleware': 543,
+#    'amazon_product_scraper.middlewares.AmazonProductScraperDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -74,9 +62,9 @@ FEED_EXPORT_ENCODING = 'utf-8-sig'
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {
-   'books_scraper.pipelines.BooksScraperPipeline': 300,
-}
+#ITEM_PIPELINES = {
+#    'amazon_product_scraper.pipelines.AmazonProductScraperPipeline': 300,
+#}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html

@@ -31,6 +31,7 @@ Note: the url does not need http, e.g. Google url would be `www.google.com`, quo
         3. Reload the page
         4. Select any HTTP request on the left panel
     - Set `FEED_EXPORT_ENCODING = 'utf-8-sig'` when there are special characters appearing in output
+    - Uncomment `ITEM_PIPELINES`
 
 - Open `items.py`
     - Define the fields for your item
