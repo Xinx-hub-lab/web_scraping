@@ -1,5 +1,6 @@
 
-# Run in Terminal
+# Instructions on Scrapy
+Run in Terminal.
 
 ## Install
 ```bash
@@ -21,7 +22,7 @@ scrapy genspider <spider_name> <url>
 ```
 Note: the url does not need http, e.g. Google url would be `www.google.com`, quotes url would be `quotes.toscrape.com`.
 
-## Modify Settings
+## Customize Spider
 - Open `settings.py` 
     - Set `ROBOTSTXT_OBEY` as `False`
     - Set `DOWNLOAD_DELAY`, determine the time in seconds based on your judgement of whether there is antispider
